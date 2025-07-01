@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ContactForm from "../components/ContactFormNetlify.astro";
+import Phone from "../components/IconParkOutlinePhone.astro";
+import Email from "../components/Email.astro";
+import Location from "../components/Location.astro";
+import Mail from "../components/Mail.astro";
+const pageTitle = "Contact Us";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>We look forward to hearing from you.</p>
+      <p>
+        <Mail />
+        Our mail address.
+      </p>
+      <p>
+        <Phone />
+        Our phone number.
+      </p>
+
+      <div class="grid">
+        <div>
+          <h2 style="text-align: center">Contact</h2>
+          <ContactForm />
+        </div>
+        <div>
+          <h2 style="text-align: center">Area Covered</h2>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50449.551788076!2d145.11568503869137!3d-37.78776678792782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1751182091902!5m2!1sen!2sau"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  h1 {
+    text-align: center;
+  }
+  .map {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  .map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+  }
+</style>

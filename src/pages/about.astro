@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+// import topimage from "../images/IMG_0613.jpg";
+// import bottomimage from "../images/IMG_0616.jpg";
+const pageTitle = "About Us";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>
+        At On-Track Auto, we're redefining convenience in car maintenance and
+        repair across Northeast Melbourne. We understand that your time is
+        precious and that traditional garage visits can be a hassle. That's why
+        we bring the workshop to you, providing top-tier automotive expertise
+        directly to your home, workplace, or even the roadside, whenever you
+        need it most.
+      </p>
+      <p>
+        Our journey began with a simple idea: make car care stress-free and
+        accessible. No more disrupting your day, arranging lifts, or wasting
+        time in waiting rooms. We've built our service around your schedule,
+        ensuring that professional, reliable car service fits seamlessly into
+        your life. Our team consists of passionate, certified mechanics equipped
+        with the latest tools and technology, ready to handle a wide range of
+        automotive needs right where your vehicle is.
+      </p>
+    </article>
+  </div>
+  <style lang="scss">
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      grid-gap: 16px;
+    }
+    .illustration {
+      padding: 0 3em;
+    }
+    @media (max-width: 768px) {
+      .right-col {
+        order: 1;
+      }
+      .left-col {
+        order: 2;
+      }
+    }
+  </style>
+</Layout>

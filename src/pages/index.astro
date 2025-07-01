@@ -1,16 +1,268 @@
 ---
+import FrontPageLayout from "../layouts/FPLayout.astro";
+import Phone from "../components/MobilePhone.astro";
+import Email from "../components/Email.astro";
+import { Image } from "astro:assets";
+import fpcard1 from "../images/Service.jpg";
+import fpcard2 from "../images/Repairs.jpg";
+import fpcard3 from "../images/Wheel.jpg";
 
+const pageTitle = "ON-TRACK AUTO";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<FrontPageLayout pageTitle={pageTitle}>
+  <div class="container">
+    <div class="main">
+      <article>
+        <p>
+          At On-track Auto, we're revolutionizing the way you experience auto
+          repair. Forget the hassle of dropping off your car at a workshop,
+          arranging rides, and waiting for days. We bring the garage directly to
+          you, whether you're at home, work, or even stuck on the roadside.
+        </p>
+        <h3>Your Trusted Mechanic, On Your Schedule</h3>
+        <p>
+          We understand that your time is valuable. That's why our certified and
+          experienced mechanics are dedicated to providing top-notch automotive
+          services that fit seamlessly into your busy life. From routine
+          maintenance like oil changes and brake inspections to more complex
+          diagnostics and repairs, we handle a wide range of services with
+          professionalism and precision. No job is too big or too small for our
+          fully equipped mobile workshop.
+        </p>
+        <h3>Why Choose On-track Auto?</h3>
+        <ul>
+          <li>
+            Unmatched Convenience: We come to you, saving you time and effort.
+          </li>
+          <li>
+            Transparent Pricing: You'll receive a clear, upfront quote before
+            any work begins, so there are no surprises.
+          </li>
+          <li>
+            Expert Technicians: Our mechanics are highly skilled, fully
+            qualified, and passionate about cars.
+          </li>
+          <li>
+            Quality Parts & Service: We use only high-quality parts and adhere
+            to the highest industry standards for all repairs.
+          </li>
+          <li>
+            Personalized Attention: Enjoy one-on-one service and direct
+            communication with your mechanic.
+          </li>
+        </ul>
+        <h3>Our Commitment to You</h3>
+        <p>
+          At On-track Auto, we're not just about fixing cars; we're about
+          building trust and long-lasting relationships with our customers. We
+          believe in honest advice, exceptional workmanship, and a commitment to
+          getting you back on the road safely and efficiently. We pride
+          ourselves on our meticulous attention to detail and our dedication to
+          ensuring your vehicle performs at its best.
+        </p>
+        <p>
+          Ready to experience the future of car maintenance? Explore our
+          services, get a free quote, or schedule an appointment online today.
+          Let us take the stress out of car care – because your convenience is
+          our priority.
+        </p>
+      </article>
+    </div>
+  </div>
+  <h2 style="text-align:center">Services</h2>
+
+  <!-- New Cards -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+          <div class="box">
+            <div class="imgBox">
+              <Image src={fpcard1} alt="Service" />
+            </div>
+            <div class="icon">
+              <a href="/services/" class="iconBox">
+                <span class="material-symbols-outlined">
+                  arrow_outward
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Servicing</h3>
+          <p>Carry out a regular or log book service.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+          <div class="box">
+            <div class="imgBox">
+              <Image src={fpcard2} alt="Repairs" />
+            </div>
+            <div class="icon">
+              <a href="/services/" class="iconBox">
+                <span class="material-symbols-outlined">
+                  arrow_outward
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Repairs</h3>
+          <p>
+            We carry out most car repairs from a no start, worn brakes or
+            leaking radiator through to a larger overhaul.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+          <div class="box">
+            <div class="imgBox">
+              <Image src={fpcard3} alt="Maintenance" />
+            </div>
+            <div class="icon">
+              <a href="/services/" class="iconBox">
+                <span class="material-symbols-outlined">
+                  arrow_outward
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Battery or Tyre Replacement</h3>
+          <p>
+            Check and replace your battery. Check, replace and balance your
+            tyres.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style lang="scss">
+    // .fp {
+    //   text-align: center;
+    //   > p {
+    //     text-align: left;
+    //   }
+    // }
+    // .container .grid {
+    //   grid-template-columns: 1fr 1fr;
+    // }
+
+    // New SCSS
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .container {
+      margin-top: 5em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 2rem;
+    }
+    // .card {
+    //   &:nth-child(1) .box .icon .iconBox {
+    //     background: #d3b19a;
+    //   }
+    // &:nth-child(1) .box .icon .iconBox {
+    //   background: #d3b19a;
+    // }
+    // &:nth-child(2) .box .icon .iconBox {
+    //   background: #70b3b1;
+    // }
+    // &:nth-child(3) .box .icon .iconBox {
+    //   background: #d05fa2;
+    // }
+    .card-inner {
+      position: relative;
+      width: inherit;
+      height: 18.75rem;
+      background: var(--clr);
+      border-radius: 1.25rem;
+      border-bottom-right-radius: 0;
+      overflow: hidden;
+
+      .box {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 1.25rem;
+        overflow: hidden;
+
+        .imgBox {
+          position: absolute;
+          inset: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .icon {
+          position: absolute;
+          bottom: -0.375rem;
+          right: -0.375rem;
+          width: 6rem;
+          height: 6rem;
+          background: var(--clr);
+          border-top-left-radius: 50%;
+
+          &:hover .iconBox {
+            transform: scale(1.1);
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            bottom: 0.375rem;
+            left: -1.25rem;
+            background: transparent;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: -1.25rem;
+            right: 0.375rem;
+            background: transparent;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
+          }
+
+          .iconBox {
+            position: absolute;
+            inset: 0.625rem;
+            background: var(--pico-primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+
+            span {
+              // color: #fff;
+              color: var(--pico-h1-color);
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  </style>
+</FrontPageLayout>

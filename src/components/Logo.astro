@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/OTALogo.svg";
+---
+
+<div class="logo"><a href="/"><Image src={logo} alt="Logo" /></a></div>
+<style lang="scss">
+  @media only screen and (max-width: 768px) {
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      & img {
+        max-width: 140px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+// import topimage from "../images/IMG_0613.jpg";
+// import bottomimage from "../images/IMG_0616.jpg";
+const pageTitle = "Frequently Asked Questions";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>
+        We bring expert automotive care directly to you, making car maintenance
+        and repairs convenient and hassle-free. Here are some common questions
+        we receive:
+      </p>
+      <details>
+        <summary role="button" class="secondary"
+          >Do you offer estimates or quotes before carrying out the work?</summary
+        >
+        <p>
+          Absolutely we do! We will provide you with upfront estimates on the
+          information you have provided us with. After an on-site assessment of
+          the vehicle we will confirm a final quote with you before any work is
+          commenced. We don’t have any hidden fees, just clear and honest
+          pricing so you know exactly what to expect.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >Do you offer emergency or same-day services?</summary
+        >
+        <p>
+          Yes, we may offer same-day and emergency services whenever possible.
+          Our availability all depends on your location and the nature of your
+          issue. We highly recommend calling us if you require any
+          same-day/emergency work and we will do our best to accommodate you as
+          quickly as possible.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >What areas do you service?</summary
+        >
+        <p>
+          We proudly service most north to north-east suburbs of Melbourne. If
+          you’re just outside of our regular service area please feel free to
+          get in-touch, we may still be able to accommodate you or provide the
+          best alternative. Please see our website for a map of the area we
+          serve.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >What are your operating hours?</summary
+        >
+        <p>
+          Our standard operating hours are 8am to 5pm Monday to Friday and 8am
+          to 1pm Saturdays. However, we may offer after-hour services depending
+          on availability. Please don’t hesitate to contact us to check our
+          availability or to schedule an after-hours appointment.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >Do I have to be present for the duration of the repair?</summary
+        >
+        <p>
+          No, you don’t need to be present for the entire service. We ask that
+          you make yourself available at the beginning to hand over your keys
+          and discuss with us any concerns you may have for us to look at, and
+          at the end of the service for a final run-through of the work
+          completed and give you a copy of the report. Many customers choose to
+          go about their day while we tend to their vehicles.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >How do I book an appointment?</summary
+        >
+        <p>
+          You can make an appointment by either going onto our website and
+          sending through an online enquiry with your preferred date and time
+          you would like the work to be completed or by calling our number for
+          the more urgent matters that may need tending to as soon as possible.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >How does your service work?</summary
+        >
+        <p>
+          After making an enquiry/booking either by phone or online we then come
+          directly to your location. We can service or diagnose and potentially
+          repair your vehicle on the spot, offering a very convenient option for
+          those with a busy schedule.
+        </p>
+      </details>
+      <details>
+        <summary role="button" class="secondary"
+          >Why would I use a mobile mechanic over a workshop that I drop my car
+          off to?</summary
+        >
+        <p>
+          Using a mobile mechanic can save you time and the hassle of having to
+          get your vehicle to a workshop and having to arrange transport home
+          and potentially being without your car for a day or potentially even
+          longer! Whether you are at home, work or stuck on the side of the
+          road. You’ll often get faster service and get your vehicle back on the
+          road quicker with the convenience of having the work potentially done
+          right Infront of you.
+        </p>
+      </details>
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  [role="button"] {
+    margin-bottom: 1em;
+  }
+  [role="button"].secondary {
+    background-color: var(--pico-primary);
+    --pico-color: var(--pico-color);
+    color: var(--pico-color);
+  }
+  [role="button"].secondary:hover,
+  [role="button"].secondary:focus {
+    background-color: var(--pico-primary-hover);
+    --pico-color: var(--pico-color);
+    color: var(--pico-color);
+  }
+  h1 {
+    text-align: center;
+  }
+  .grid {
+    grid-gap: 16px;
+  }
+  .illustration {
+    padding: 0 3em;
+  }
+  @media (max-width: 768px) {
+    .right-col {
+      order: 1;
+    }
+    .left-col {
+      order: 2;
+    }
+  }
+</style>

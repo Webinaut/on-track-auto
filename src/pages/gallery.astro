@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+// import topimage from "../images/IMG_0613.jpg";
+// import bottomimage from "../images/IMG_0616.jpg";
+const pageTitle = "Photo Gallery";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>
+        This photo gallery captures the range of services we provide. <b
+          >Click on a photo to open a slideshow.</b
+        >
+      </p>
+      <p>Gallery goes here</p>
+    </article>
+  </div>
+  <style lang="scss">
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      grid-gap: 16px;
+    }
+    .illustration {
+      padding: 0 3em;
+    }
+    @media (max-width: 768px) {
+      .right-col {
+        order: 1;
+      }
+      .left-col {
+        order: 2;
+      }
+    }
+  </style>
+</Layout>

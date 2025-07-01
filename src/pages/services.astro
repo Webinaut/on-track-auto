@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+// import topimage from "../images/IMG_0613.jpg";
+// import bottomimage from "../images/IMG_0616.jpg";
+const pageTitle = "Services";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <h2>Servicing</h2>
+      <p>
+        At On-Track Auto, we're redefining convenience in car maintenance and
+        repair across Northeast Melbourne. We understand that your time is
+        precious and that traditional garage visits can be a hassle. That's why
+        we bring the workshop to you, providing top-tier automotive expertise
+        directly to your home, workplace, or even the roadside, whenever you
+        need it most.
+      </p>
+
+      <h2>Repairs</h2>
+      <p>
+        At On-Track Auto, we're redefining convenience in car maintenance and
+        repair across Northeast Melbourne. We understand that your time is
+        precious and that traditional garage visits can be a hassle. That's why
+        we bring the workshop to you, providing top-tier automotive expertise
+        directly to your home, workplace, or even the roadside, whenever you
+        need it most.
+      </p>
+
+      <h2>Battery Replacement</h2>
+      <p>
+        At On-Track Auto, we're redefining convenience in car maintenance and
+        repair across Northeast Melbourne. We understand that your time is
+        precious and that traditional garage visits can be a hassle. That's why
+        we bring the workshop to you, providing top-tier automotive expertise
+        directly to your home, workplace, or even the roadside, whenever you
+        need it most.
+      </p>
+
+      <h2>Tyre Replacement</h2>
+      <p>
+        At On-Track Auto, we're redefining convenience in car maintenance and
+        repair across Northeast Melbourne. We understand that your time is
+        precious and that traditional garage visits can be a hassle. That's why
+        we bring the workshop to you, providing top-tier automotive expertise
+        directly to your home, workplace, or even the roadside, whenever you
+        need it most.
+      </p>
+    </article>
+  </div>
+  <style lang="scss">
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      grid-gap: 16px;
+    }
+    .illustration {
+      padding: 0 3em;
+    }
+    @media (max-width: 768px) {
+      .right-col {
+        order: 1;
+      }
+      .left-col {
+        order: 2;
+      }
+    }
+  </style>
+</Layout>
