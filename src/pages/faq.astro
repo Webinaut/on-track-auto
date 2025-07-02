@@ -15,7 +15,7 @@ const pageTitle = "Frequently Asked Questions";
         we receive:
       </p>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >Do you offer estimates or quotes before carrying out the work?</summary
         >
         <p>
@@ -27,7 +27,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >Do you offer emergency or same-day services?</summary
         >
         <p>
@@ -39,7 +39,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >What areas do you service?</summary
         >
         <p>
@@ -51,7 +51,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >What are your operating hours?</summary
         >
         <p>
@@ -62,7 +62,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >Do I have to be present for the duration of the repair?</summary
         >
         <p>
@@ -75,7 +75,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >How do I book an appointment?</summary
         >
         <p>
@@ -86,7 +86,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >How does your service work?</summary
         >
         <p>
@@ -97,7 +97,7 @@ const pageTitle = "Frequently Asked Questions";
         </p>
       </details>
       <details>
-        <summary role="button" class="secondary"
+        <summary role="button" class="outline"
           >Why would I use a mobile mechanic over a workshop that I drop my car
           off to?</summary
         >
@@ -118,32 +118,20 @@ const pageTitle = "Frequently Asked Questions";
   [role="button"] {
     margin-bottom: 1em;
   }
-  [role="button"].secondary {
-    background-color: var(--pico-primary);
-    --pico-color: var(--pico-color);
-    color: var(--pico-color);
+  [role="button"].outline {
+    // background-color: var(--pico-primary);
+    // --pico-color: var(--pico-color);
+    // color: var(--pico-color);
   }
-  [role="button"].secondary:hover,
-  [role="button"].secondary:focus {
-    background-color: var(--pico-primary-hover);
-    --pico-color: var(--pico-color);
-    color: var(--pico-color);
+  [role="button"].outline:hover,
+  [role="button"].outline:focus {
+    box-shadow: none;
+    border-color: var(--pico-primary-hover);
+    // background-color: var(--pico-primary-hover);
+    // --pico-color: var(--pico-color);
+    // color: var(--pico-color);
   }
   h1 {
     text-align: center;
-  }
-  .grid {
-    grid-gap: 16px;
-  }
-  .illustration {
-    padding: 0 3em;
-  }
-  @media (max-width: 768px) {
-    .right-col {
-      order: 1;
-    }
-    .left-col {
-      order: 2;
-    }
   }
 </style>
