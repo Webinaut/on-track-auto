@@ -21,37 +21,39 @@
     data-remove-prefix
     value="Contact Form from royalparkladiesgolfclub.com.au"
   />
-  <fieldset>
-    <p><label>Name: <input type="text" name="name" /></label></p>
-    <p>
-      <label>Email Address: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>
-        Message: <textarea name="message"></textarea>
-      </label>
-    </p>
-    <p>
-      If you would like to see if we have a date available for a mobile service,
-      please enter it here:
-    </p>
-    <p>
-      <label for="date1">Your first choice date:</label>
-      <input type="date" id="date1" name="date1" />
-      <label for="date2">Your second choice date:</label>
-      <input type="date" id="date2" name="date2" />
-      <label for="date3">Your third choice date:</label>
-      <input type="date" id="date3" name="date3" />
-    </p>
-    <p>
-      <label>Vehicle Registration: <input type="text" name="rego" /></label>
-    </p>
-    <p></p>
-    <div data-netlify-recaptcha="true"></div>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+
+  <fieldset class="grid">
+    <label>Name: <input type="text" name="name" /></label>
+
+    <label>Email Address: <input type="email" name="email" /></label>
   </fieldset>
+
+  <label>
+    Message: <textarea name="message"></textarea>
+  </label>
+
+  <p>
+    If you would like to see if we have a date available for a mobile service,
+    please enter it here:
+  </p>
+
+  <fieldset class="grid">
+    <label for="date1">Your first choice date:</label>
+    <input type="date" id="date1" name="date1" />
+    <label for="date2">Your second choice date:</label>
+    <input type="date" id="date2" name="date2" />
+  </fieldset>
+  <fieldset class="grid">
+    <label for="date3">Your third choice date:</label>
+    <input type="date" id="date3" name="date3" />
+    <label for="rego">Vehicle Registration:</label>
+    <input type="text" id="rego" name="rego" />
+  </fieldset>
+
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit">Send</button>
+  </p>
   <style>
     .hidden {
       display: none;
