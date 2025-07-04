@@ -12,6 +12,7 @@
     "@astrojs/sitemap": "^3.4.1",
     "@picocss/pico": "^2.1.1",
     "astro": "^5.10.1",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "swiper": "^11.2.10"
   }
 }

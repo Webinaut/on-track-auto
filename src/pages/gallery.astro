@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import Gallery from "../components/Gallery.astro";
 // import topimage from "../images/IMG_0613.jpg";
 // import bottomimage from "../images/IMG_0616.jpg";
 const pageTitle = "Photo Gallery";
@@ -14,7 +15,7 @@ const pageTitle = "Photo Gallery";
           >Click on a photo to open a slideshow.</b
         >
       </p>
-      <p>Gallery goes here</p>
+      <p><Gallery /></p>
     </article>
   </div>
   <style lang="scss">
