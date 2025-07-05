@@ -144,16 +144,6 @@ const pageTitle = "ON-TRACK AUTO";
   </section>
 
   <style lang="scss">
-    // .fp {
-    //   text-align: center;
-    //   > p {
-    //     text-align: left;
-    //   }
-    // }
-    // .container .grid {
-    //   grid-template-columns: 1fr 1fr;
-    // }
-
     // New SCSS
 
     a {
@@ -167,19 +157,7 @@ const pageTitle = "ON-TRACK AUTO";
       grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
       gap: 2rem;
     }
-    // .card {
-    //   &:nth-child(1) .box .icon .iconBox {
-    //     background: #d3b19a;
-    //   }
-    // &:nth-child(1) .box .icon .iconBox {
-    //   background: #d3b19a;
-    // }
-    // &:nth-child(2) .box .icon .iconBox {
-    //   background: #70b3b1;
-    // }
-    // &:nth-child(3) .box .icon .iconBox {
-    //   background: #d05fa2;
-    // }
+
     .card-inner {
       position: relative;
       width: inherit;
@@ -192,7 +170,8 @@ const pageTitle = "ON-TRACK AUTO";
       .box {
         width: 100%;
         height: 100%;
-        background: #fff;
+        background: var(--pico-primary-inverse);
+        // background: #fff;
         border-radius: 1.25rem;
         overflow: hidden;
 
