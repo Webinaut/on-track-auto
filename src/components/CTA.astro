@@ -21,7 +21,14 @@
     /* padding: 3em; */
     > h1 {
       position: sticky;
-      color: var(--pico-primary-inverse);
+      background: linear-gradient(
+        to right,
+        var(--pico-primary-hover) 0%,
+        var(--pico-primary-focus) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* color: var(--pico-primary-inverse); */
       font-size: 3.5rem;
       font-weight: 500;
       margin-bottom: 0;
