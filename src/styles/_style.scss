@@ -251,9 +251,9 @@ button[role="tab"] {
   .main-nav ul li a {
     color: var(--pico-primary-background);
   }
-  nav li:first-child a {
-    color: var(--pico-primary-inverse);
-  }
+  // nav li:first-child a {
+  //   color: var(--pico-primary-inverse);
+  // }
   .main-nav ul li a.active {
     color: var(--pico-primary);
   }
