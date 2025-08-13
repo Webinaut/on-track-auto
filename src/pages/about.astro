@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import mapimage from "../images/OnTrackAutoCoverage.png";
+import AboutImageStack from "../components/AboutPageImageStack.astro";
 // import topimage from "../images/IMG_0613.jpg";
 // import bottomimage from "../images/IMG_0616.jpg";
 const pageTitle = "About Us";
@@ -9,31 +10,42 @@ const pageTitle = "About Us";
 
 <Layout pageTitle={pageTitle}>
   <div class="container">
-    <article>
-      <h2 style="text-align: center">Our Story</h2>
-      <p>
-        At On-Track Auto, we’re redefining the convenience of car servicing and
-        repairs across the North to North-East of Melbourne. We understand how
-        important your time is and that normal garage visits can be a headache.
-        This is why we bring the workshop to you! Providing you with the ease of
-        us coming directly to your home, workplace or on the side of the road,
-        to make your day easier.
-      </p>
-      <p>
-        On-Track Auto began with a simple idea: Make getting your car serviced
-        or fixed with no stress and readily accessible. No more having to get
-        your car dropped off in the morning while navigating busy rush hour
-        traffic and leaving it for the day or having to wait in workshop waiting
-        rooms. We’ve built our system on operating around your schedule, making
-        sure that professional and reliable car care slots perfectly into your
-        day. Our Trade Certified Mechanics are equipped with the latest tools
-        and technology to get the job done right where your vehicle is parked.
-      </p>
-      <h2 style="text-align: center" id="area">Area Covered</h2>
-      <div class="map">
-        <Image src={mapimage} alt="Area Covered" />
-      </div>
-    </article>
+    <div class="main">
+      <article>
+        <div class="grid grid1">
+          <div class="left-col">
+            <h2 style="text-align: center">Our Story</h2>
+            <p>
+              At On-Track Auto, we’re redefining the convenience of car
+              servicing and repairs across the North to North-East of Melbourne.
+              We understand how important your time is and that normal garage
+              visits can be a headache. This is why we bring the workshop to
+              you! Providing you with the ease of us coming directly to your
+              home, workplace or on the side of the road, to make your day
+              easier.
+            </p>
+            <p>
+              On-Track Auto began with a simple idea: Make getting your car
+              serviced or fixed with no stress and readily accessible. No more
+              having to get your car dropped off in the morning while navigating
+              busy rush hour traffic and leaving it for the day or having to
+              wait in workshop waiting rooms. We’ve built our system on
+              operating around your schedule, making sure that professional and
+              reliable car care slots perfectly into your day. Our Trade
+              Certified Mechanics are equipped with the latest tools and
+              technology to get the job done right where your vehicle is parked.
+            </p>
+          </div>
+          <div class="right-col"><AboutImageStack /></div>
+        </div>
+      </article>
+      <article>
+        <h2 style="text-align: center" id="area">Area Covered</h2>
+        <div class="map">
+          <Image src={mapimage} alt="Area Covered" />
+        </div>
+      </article>
+    </div>
   </div>
   <style lang="scss">
     article {
@@ -42,9 +54,29 @@ const pageTitle = "About Us";
     h1 {
       text-align: center;
     }
+    #area {
+      padding-top: 1em;
+    }
     .map {
       text-align: center;
       padding-bottom: 2em;
+    }
+    .grid {
+      grid-template-rows: repeat(3, auto);
+    }
+    .grid.grid1 {
+      grid-template-columns: 60% 40%;
+    }
+    @media (max-width: 768px) {
+      .grid.grid1 {
+        grid-template-columns: 100%;
+      }
+      .right-col {
+        order: 1;
+      }
+      .left-col {
+        order: 2;
+      }
     }
     // .map iframe {
     //   // left: 0;

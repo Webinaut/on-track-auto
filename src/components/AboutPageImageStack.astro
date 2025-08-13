@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import One from "../images/stock-gallery/isabela-kronemberger-OegFhZfw6Ok-unsplash.jpg";
+import Two from "../images/stock-gallery/tekton-O_ufcLVTAYw-unsplash.jpg";
+---
+
+<div class="image-stack">
+  <div class="one"><Image src={One} alt="Tools" /></div>
+  <div class="two"><Image src={Two} alt="Wheel" /></div>
+</div>
+<style>
+  .image-stack {
+    padding-top: 6em;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .one {
+    /* width: 80%; */
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    z-index: 2;
+  }
+  .two {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2 / span 5;
+    padding-top: 80%;
+    padding-left: 1em;
+    z-index: 3;
+  }
+</style>
