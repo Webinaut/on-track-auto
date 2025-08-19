@@ -3,7 +3,6 @@
 ---
 
 <div class="cta-wrap">
-  <!-- <h2>Design, Develop, Launch and Manage</h2> -->
   <div class="cta">
     <h1>Book Mobile Service</h1>
     <h4>We Come to You!</h4>
@@ -18,7 +17,6 @@
   }
   .cta {
     position: sticky;
-    /* padding: 3em; */
     > h1 {
       position: sticky;
       background: linear-gradient(
@@ -28,16 +26,30 @@
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      /* color: var(--pico-primary-inverse); */
       font-size: 3.5rem;
       font-weight: 500;
       margin-bottom: 0;
+      /* Text Emboss */
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0.001em 0.05em 0.01em #0004;
+      -webkit-text-stroke: 0.01em #00000015;
+      filter: brightness(120%);
     }
     > h4 {
       position: sticky;
-      color: var(--pico-primary-inverse);
+      /* color: var(--pico-primary-inverse); */
       font-size: 2.5rem;
-      font-weight: 400;
+      font-weight: 500;
+      background: var(--pico-primary-inverse);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* Text Emboss */
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0.001em 0.05em 0.01em #0004;
+      -webkit-text-stroke: 0.01em #00000015;
+      filter: brightness(120%);
     }
   }
   /* .cta:before {
