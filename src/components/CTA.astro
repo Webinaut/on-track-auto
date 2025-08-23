@@ -6,7 +6,7 @@
   <div class="cta">
     <h1>Book Mobile Service</h1>
     <h4>We Come to You!</h4>
-    <a href="/contact/" role="button">Get in Touch</a>
+    <a href="/contact/" role="button"><div class="btn-text">Get in Touch</div></a>
   </div>
 </div>
 <style>
@@ -38,7 +38,6 @@
     }
     > h4 {
       position: sticky;
-      /* color: var(--pico-primary-inverse); */
       font-size: 2.5rem;
       font-weight: 500;
       background: var(--pico-primary-inverse);
@@ -52,20 +51,36 @@
       filter: brightness(120%);
     }
   }
-  /* .cta:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--pico-primary-hover-background);
-    opacity: 0.75;
-    clip-path: url(#clip); /* applying clip animation 
-  } */
-  /* @media screen and (min-width: 769px) {
-    .cta-wrap {
-      margin-top: 100px;
-    }
-  } */
+
+  a[role="button"] {
+    background-color: #ff5126;
+        box-shadow:
+    0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.1),
+    1.5px 2.9px 3.7px -0.4px hsl(0deg 0% 0% / 0.1),
+    2.7px 5.4px 6.8px -0.7px hsl(0deg 0% 0% / 0.1),
+    4.5px 8.9px 11.2px -1.1px hsl(0deg 0% 0% / 0.1),
+    7.1px 14.3px 18px -1.4px hsl(0deg 0% 0% / 0.1),
+    11.2px 22.3px 28.1px -1.8px hsl(0deg 0% 0% / 0.1),
+    17px 33.9px 42.7px -2.1px hsl(0deg 0% 0% / 0.1),
+    25px 50px 62.9px -2.5px hsl(0deg 0% 0% / 0.1);
+	transition: 0.25s ease;
+}
+a[role="button"]:hover {
+  background-color: white;
+}
+a[role="button"]:hover .btn-text {
+  color: #ff3200;
+  /* color: var(--pico-primary-focus); */
+  text-shadow: none;
+}
+  .btn-text {
+      background: var(--pico-primary-inverse);
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0.001em 0.05em 0.01em #0000;
+      -webkit-text-stroke: 0.01em #00000015;
+      filter: brightness(160%);
+}
+  }
+  
 </style>
