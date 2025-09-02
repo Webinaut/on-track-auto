@@ -8,39 +8,11 @@
   --pico-primary-background: #1f2833;
   --pico-text-selection-color: var(--pico-primary);
   --pico-primary: #f5901a;
-  // --pico-primary: #ff6f49;
-  // --pico-primary: #f5b81a;
   --pico-primary-hover: #f5b81a;
-  // --pico-primary-hover: #b1b1b1;
-  // --pico-primary-hover: #c5c6c8;
   --pico-primary-focus: #ff6f49;
-  // --pico-primary-focus: #f59c33;
-  // --pico-primary-focus: #46a29f;
   --pico-primary-inverse: #fff;
   --pico-secondary: #9c9c9c;
-  // --pico-color: #27363b;
-  // --pico-h1-color: #27363b;
-  // --pico-primary-background: #425e5e;
-  // --pico-text-selection-color: var(--pico-primary);
-  // --pico-primary: #80a879;
-  // --pico-primary-hover: #6cada8;
-  // --pico-primary-focus: #75b2ad;
-  // --pico-primary-inverse: #fff;
-  // --pico-secondary: #9c9c9c;
 }
-// [data-theme="light"],
-// :root:not([data-theme="dark"]),
-// :host:not([data-theme="dark"]) {
-//   --pico-color: #1f1d42;
-//   --pico-h1-color: #1f1d42;
-//   --pico-primary-background: #1f1d42;
-//   --pico-text-selection-color: #59956f;
-//   --pico-primary: #86b971;
-//   --pico-primary-hover: #f9bf6d;
-//   --pico-primary-focus: #ffff66;
-//   --pico-primary-inverse: #fff;
-//   --pico-secondary: #9c9c9c;
-// }
 
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
