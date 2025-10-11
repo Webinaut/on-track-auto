@@ -74,7 +74,7 @@ const description =
   <section>
     <div class="container">
       <div class="card">
-        <div class="card-inner" style="--clr:#fff;">
+        <div class="card-inner">
           <div class="box">
             <div class="imgBox">
               <Image src={fpcard1} alt="Service" />
@@ -94,7 +94,7 @@ const description =
         </div>
       </div>
       <div class="card">
-        <div class="card-inner" style="--clr:#fff;">
+        <div class="card-inner">
           <div class="box">
             <div class="imgBox">
               <Image src={fpcard2} alt="Repairs" />
@@ -117,7 +117,7 @@ const description =
         </div>
       </div>
       <div class="card">
-        <div class="card-inner" style="--clr:#fff;">
+        <div class="card-inner">
           <div class="box">
             <div class="imgBox">
               <Image src={fpcard3} alt="Maintenance" />
@@ -143,8 +143,6 @@ const description =
   </section>
 
   <style lang="scss">
-    // New SCSS
-
     a {
       display: inline-block;
       text-decoration: none;
@@ -161,7 +159,7 @@ const description =
       position: relative;
       width: inherit;
       height: 18.75rem;
-      background: var(--clr);
+      background-color: #fff;
       border-radius: 1.25rem;
       border-bottom-right-radius: 0;
       overflow: hidden;
@@ -170,7 +168,6 @@ const description =
         width: 100%;
         height: 100%;
         background: var(--pico-primary-inverse);
-        // background: #fff;
         border-radius: 1.25rem;
         overflow: hidden;
 
@@ -191,7 +188,7 @@ const description =
           right: -0.375rem;
           width: 6rem;
           height: 6rem;
-          background: var(--clr);
+          background: #fff;
           border-top-left-radius: 50%;
 
           &:hover .iconBox {
@@ -233,12 +230,19 @@ const description =
             transition: 0.3s;
 
             span {
-              // color: #fff;
               color: var(--pico-h1-color);
               font-size: 1.5rem;
             }
           }
         }
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      .card-inner .box .icon {
+        background-color: var(--pico-background-color);
+      }
+      .card-inner .box .icon::before {
+        box-shadow: 0.313rem 0.313rem 0 0.313rem var(--pico-background-color);
       }
     }
   </style>
