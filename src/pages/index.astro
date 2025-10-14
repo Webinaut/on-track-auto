@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import fpcard1 from "../images/Service.jpg";
 import fpcard2 from "../images/Repairs.jpg";
 import fpcard3 from "../images/Wheel.jpg";
+import mapimage from "../images/OnTrackAutoCoverage.png";
 
 const title =
   "On-Track Auto | Mobile Mechanic | Servicing Bundoora and Surrounds";
@@ -18,9 +19,10 @@ const description =
     <div class="main">
       <article>
         <p>
-          At On-Track Auto, as a mobile mechanic, we are redefining your
-          experience with servicing and vehicle repairs. Whether it’s at your
-          house, your work, or on the side of the road, we come to you!
+          At On-Track Auto, as your mobile mechanic in Bundoora, we are
+          redefining your experience with servicing and vehicle repairs. Whether
+          it’s at your house, your work, or on the side of the road, we come to
+          you!
         </p>
         <p>
           We take away the hassle of having to take your vehicle to a workshop,
@@ -41,7 +43,9 @@ const description =
           offer a wide range of services, backed by professionalism, reliability
           and a mobile mechanic you can trust!
         </p>
-        <h3>Why Choose On-track Auto?</h3>
+        <h3>
+          Why Choose On-Track Auto – Your Local Mobile Mechanic in Bundoora?
+        </h3>
         <ul>
           <li>
             Unrivalled convenience with quality service at the right price!
@@ -63,7 +67,7 @@ const description =
           building an everlasting relationship with our customers based purely
           on trust, honesty and exceptional workmanship. Our commitment to you
           is getting you back on the road as safely and as efficiently as
-          possible, ensuring your vehicle is operating at its best.
+          possible, ensuring your vehicle is operating at its best. Book Today!
         </p>
       </article>
     </div>
@@ -141,7 +145,17 @@ const description =
       </div>
     </div>
   </section>
-
+  <article>
+    <h2 style="text-align: center; margin-top: 0;" id="area">Area Covered</h2>
+    <p>
+      On-Track Auto proudly provides Mobile Mechanical Services across Bundoora
+      and surrounding suburbs. Including Watsonia, Plenty, Eltham, Templestowe,
+      Doncaster, Balwyn, Kew, Brunswick, Reservoir, Epping and much more.
+    </p>
+    <div class="map">
+      <Image src={mapimage} alt="Area Covered" />
+    </div>
+  </article>
   <style lang="scss">
     a {
       display: inline-block;

@@ -1,5 +1,5 @@
 ---
-// import logo from "../images/MS-Logo.png?url";
+import Callbutton from "./Callbutton.astro";
 import fphero from "../images/FPHeroBW.png";
 import Logo from "./Logo.astro";
 import CTA from "./CTA.astro";
@@ -9,6 +9,7 @@ import Hamburger from "./Hamburger.astro";
 
 <div class="container-fluid fp-header">
   <Logo />
+  <Callbutton />
   <Hamburger />
   <Navigation />
   <CTA />
@@ -25,6 +26,6 @@ import Hamburger from "./Hamburger.astro";
         rgb(from var(--pico-color) r g b / 0.95),
         rgb(from var(--pico-secondary) r g b / 0.3)
       ); /*your gradient here - top to bottom*/
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 </style>
