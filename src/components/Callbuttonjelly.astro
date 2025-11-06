@@ -6,48 +6,14 @@
   <a href="tel:0461543571"><span>Call Us</span></a>
 </button>
 <style lang="scss">
-  // a[role="button"] {
-  //   background-image: linear-gradient(var(--pico-primary), #ff5126);
-  //   box-shadow:
-  //     0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.1),
-  //     1.5px 2.9px 3.7px -0.4px hsl(0deg 0% 0% / 0.1),
-  //     2.7px 5.4px 6.8px -0.7px hsl(0deg 0% 0% / 0.1),
-  //     4.5px 8.9px 11.2px -1.1px hsl(0deg 0% 0% / 0.1),
-  //     7.1px 14.3px 18px -1.4px hsl(0deg 0% 0% / 0.1),
-  //     11.2px 22.3px 28.1px -1.8px hsl(0deg 0% 0% / 0.1),
-  //     17px 33.9px 42.7px -2.1px hsl(0deg 0% 0% / 0.1),
-  //     25px 50px 62.9px -2.5px hsl(0deg 0% 0% / 0.1);
-  //   transition: 0.25s ease;
-  //   padding: 0.6em 1.2em;
-  //   margin: 0 1em;
-  // }
-
-  // a[role="button"]:hover {
-  //   background-image: linear-gradient(#ff5126, var(--pico-primary));
-  // }
-  // a[role="button"]:hover .btn-text {
-  //   font-weight: 800;
-  //   text-shadow: none;
-  // }
-  // .btn-text {
-  //   background: var(--pico-primary-inverse);
-  //   background-clip: text;
-  //   font-weight: 600;
-  //   color: transparent;
-  //   text-shadow: 0.001em 0.05em 0.01em #0000;
-  //   -webkit-text-stroke: 0.01em #00000015;
-  //   filter: brightness(160%);
-  // }
-</style>
-<style lang="scss">
   /* From Uiverse.io by vinodjangid07 */
 
   .Btn {
     background-image: linear-gradient(var(--pico-primary), #ff5126);
     box-shadow:
-      0px 10px 10px var(--pico-primary) inset,
+      0px 10px 10px rgb(245, 144, 26) inset,
       0px 5px 10px rgba(5, 5, 5, 0.212),
-      0px -10px 10px #ff5126 inset;
+      0px -10px 10px rgb(255, 81, 38) inset;
 
     transition: 0.25s ease;
     padding: 0.6em 1.2em;
@@ -66,10 +32,6 @@
       font-weight: 600;
       text-shadow: 0.001em 0.05em 0.01em #0000;
       -webkit-text-stroke: 0.01em #00000015;
-      filter: brightness(160%);
-      &:hover {
-        font-size: 1.4rem;
-      }
     }
     &::before {
       width: 70%;
@@ -91,12 +53,9 @@
       bottom: 7px;
       border-radius: 50%;
     }
-
     &:hover {
-      box-shadow:
-        0px 10px 10px #ff5126 inset,
-        0px 5px 10px rgba(5, 5, 5, 0.212),
-        0px -10px 10px var(--pico-primary) inset;
+      border: var(--pico-primary-hover) 2px solid;
+      transition: ease-in 0.25s;
     }
   }
 </style>
