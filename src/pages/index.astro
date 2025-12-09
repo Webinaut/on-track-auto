@@ -3,6 +3,7 @@ import FrontPageLayout from "../layouts/FPLayout.astro";
 import Phone from "../components/MobilePhone.astro";
 import Email from "../components/Email.astro";
 import { Image } from "astro:assets";
+import fpimage from "../images/IMG_9407.jpeg";
 import fpcard1 from "../images/Service.jpg";
 import fpcard2 from "../images/Repairs.jpg";
 import fpcard3 from "../images/Wheel.jpg";
@@ -18,31 +19,40 @@ const description =
   <div class="container">
     <div class="main">
       <article>
-        <p>
-          At On-Track Auto, as your mobile mechanic in Bundoora, we are
-          redefining your experience with servicing and vehicle repairs. Whether
-          it’s at your house, your work, or on the side of the road, we come to
-          you!
-        </p>
-        <p>
-          We take away the hassle of having to take your vehicle to a workshop,
-          organising a lift home, and then potentially having to wait days to
-          get your vehicle back. We offer fast, prompt service at competitive
-          prices to get you back on the road as fast as possible.
-        </p>
-        <h3>Your Trusted Mechanic, On Your Schedule</h3>
-        <p>
-          We understand that your time is valuable. That’s why our qualified,
-          experienced mobile mechanics go above and beyond to provide you with
-          top-notch service that slots perfectly into your busy schedule.
-        </p>
-        <p>
-          Whether it’s routine maintenance like Logbook servicing or a basic oil
-          and filter change with a full safety check over to more in-depth
-          diagnostics and repairs. With our fully equipped mobile workshop we
-          offer a wide range of services, backed by professionalism, reliability
-          and a mobile mechanic you can trust!
-        </p>
+        <div class="grid intro">
+          <div class="left-box">
+            <p>
+              At On-Track Auto, as your mobile mechanic in Bundoora, we are
+              redefining your experience with servicing and vehicle repairs.
+              Whether it’s at your house, your work, or on the side of the road,
+              we come to you!
+            </p>
+            <p>
+              We take away the hassle of having to take your vehicle to a
+              workshop, organising a lift home, and then potentially having to
+              wait days to get your vehicle back. We offer fast, prompt service
+              at competitive prices to get you back on the road as fast as
+              possible.
+            </p>
+            <h3>Your Trusted Mechanic, On Your Schedule</h3>
+            <p>
+              We understand that your time is valuable. That’s why our
+              qualified, experienced mobile mechanics go above and beyond to
+              provide you with top-notch service that slots perfectly into your
+              busy schedule.
+            </p>
+            <p>
+              Whether it’s routine maintenance like Logbook servicing or a basic
+              oil and filter change with a full safety check over to more
+              in-depth diagnostics and repairs. With our fully equipped mobile
+              workshop we offer a wide range of services, backed by
+              professionalism, reliability and a mobile mechanic you can trust!
+            </p>
+          </div>
+          <div class="intro-image">
+            <Image src={fpimage} alt="On-Track Auto" />
+          </div>
+        </div>
         <h3>
           Why Choose On-Track Auto – Your Local Mobile Mechanic in Bundoora?
         </h3>
@@ -60,7 +70,6 @@ const description =
             through the job
           </li>
         </ul>
-
         <h3>Our Commitment to You</h3>
         <p>
           At On-Track Auto, we’re not all about just fixing cars. We’re about
@@ -157,6 +166,20 @@ const description =
     </div>
   </article>
   <style lang="scss">
+    .grid {
+      grid-template-rows: repeat(3, auto);
+    }
+    .grid.intro {
+      // grid-template-columns: 60% 40%;
+      & .intro-image {
+        align-content: start;
+        justify-self: center;
+        > img {
+          width: 500px;
+        }
+      }
+    }
+
     a {
       display: inline-block;
       text-decoration: none;
@@ -251,12 +274,26 @@ const description =
         }
       }
     }
+    .map {
+      text-align: center;
+    }
     @media (prefers-color-scheme: dark) {
       .card-inner .box .icon {
         background-color: var(--pico-background-color);
       }
       .card-inner .box .icon::before {
         box-shadow: 0.313rem 0.313rem 0 0.313rem var(--pico-background-color);
+      }
+    }
+    @media (max-width: 768px) {
+      .grid.intro {
+        grid-template-columns: 100%;
+      }
+      .intro-image {
+        order: 1;
+      }
+      .left-box {
+        order: 2;
       }
     }
   </style>

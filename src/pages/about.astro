@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import mapimage from "../images/OnTrackAutoCoverage.png";
-import AboutImageStack from "../components/AboutPageImageStack.astro";
-// import topimage from "../images/IMG_0613.jpg";
+// import AboutImageStack from "../components/AboutPageImageStack.astro";
+import vanimage from "../images/IMG_9391.jpeg";
 // import bottomimage from "../images/IMG_0616.jpg";
 const title = "About Us";
 const description = "About Your Trusted Mobile Mechanic";
@@ -37,7 +37,7 @@ const description = "About Your Trusted Mobile Mechanic";
               technology to get the job done right where your vehicle is parked.
             </p>
           </div>
-          <div class="right-col"><AboutImageStack /></div>
+          <div class="right-col"><Image src={vanimage} alt="van image" /></div>
         </div>
       </article>
     </div>
@@ -61,7 +61,15 @@ const description = "About Your Trusted Mobile Mechanic";
     }
     .grid.grid1 {
       grid-template-columns: 60% 40%;
+      & .right-col {
+        align-content: center;
+        justify-self: center;
+        & img {
+          width: 320px;
+        }
+      }
     }
+
     @media (max-width: 768px) {
       .grid.grid1 {
         grid-template-columns: 100%;
