@@ -83,7 +83,8 @@ a[role="button"] {
     color: var(--pico-primary-focus);
     background-color: var(--pico-primary-inverse);
     --shadow-color: 0deg 0% 0%;
-    box-shadow: 0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.07),
+    box-shadow:
+      0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.07),
       1.2px 2.3px 3.4px -0.4px hsl(var(--shadow-color) / 0.11),
       2.6px 5.2px 7.7px -0.8px hsl(var(--shadow-color) / 0.15),
       5.8px 11.6px 17.1px -1.2px hsl(var(--shadow-color) / 0.18);
@@ -95,7 +96,6 @@ ul {
   --pico-color: var(--pico-h1-color);
 }
 
-// Splide Pagination Sty--pico-color:les
 button[role="tab"] {
   padding: 0.3em;
   background-color: var(--pico-color);
@@ -149,8 +149,12 @@ button[role="tab"] {
 .main-nav ul li a:hover:before {
   width: 100%;
   left: 0;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-  -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transition:
+    width 0.3s ease-in-out,
+    left 0.3s ease-in-out;
+  -webkit-transition:
+    width 0.3s ease-in-out,
+    left 0.3s ease-in-out;
 }
 
 .container-fluid nav ul li {

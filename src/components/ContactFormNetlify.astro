@@ -22,22 +22,27 @@
     value="Contact Form from ON-TRACK AUTO"
   />
 
-  <fieldset class="grid">
-    <label>Name: <input type="text" name="name" required /></label>
-    <label>Email Address: <input type="email" name="email" required /></label>
-    <label
+  <!-- <div class="contact-grid"> -->
+  <fieldset class="contact-grid">
+    <label id="name">Name: <input type="text" name="name" required /></label>
+    <label id="email"
+      >Email Address: <input type="email" name="email" required /></label
+    >
+    <label id="mobile"
       >Mobile Number: <input
         type="tel"
         name="phone"
         pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
       /></label
     >
+    <label id="suburb"
+      >Suburb: <input type="text" name="suburb" required /></label
+    >
+    <label id="message">
+      Message: <textarea name="message"></textarea>
+    </label>
   </fieldset>
-
-  <label>
-    Message: <textarea name="message"></textarea>
-  </label>
-
+  <!-- </div> -->
   <p>
     If you would like to see if we have a date available for a mobile service,
     please enter it here:
@@ -61,6 +66,29 @@
     <button type="submit">Send</button>
   </p>
   <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+    #name {
+      grid-area: 1/1/2/2;
+    }
+    #email {
+      grid-area: 1/2/2/3;
+    }
+    #mobile {
+      grid-area: 1/3/2/4;
+    }
+    #suburb {
+      grid-area: 2/1/3/2;
+    }
+    #message {
+      grid-area: 2 / 2 / 3 / 4;
+    }
+
     .hidden {
       display: none;
     }
@@ -70,6 +98,27 @@
     button {
       width: 50%;
       margin-top: 2em;
+    }
+    @media only screen and (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+      }
+      #name {
+        grid-area: 1/1/2/2;
+      }
+      #email {
+        grid-area: 2/1/3/2;
+      }
+      #mobile {
+        grid-area: 3/1/4/2;
+      }
+      #suburb {
+        grid-area: 4/1/5/2;
+      }
+      #message {
+        grid-area: 5/1/6/2;
+      }
     }
   </style>
 </form>

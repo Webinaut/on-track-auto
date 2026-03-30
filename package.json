@@ -9,9 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/sitemap": "^3.7.2",
     "@picocss/pico": "^2.1.1",
-    "astro": "^5.10.1",
+    "astro": "^6.1.1",
     "sass": "^1.89.2",
     "swiper": "^11.2.10"
   }
