@@ -1,18 +1,18 @@
 ---
 import FrontPageLayout from "../layouts/FPLayout.astro";
-import Phone from "../components/MobilePhone.astro";
-import Email from "../components/Email.astro";
+// import Phone from "../components/MobilePhone.astro";
+// import Email from "../components/Email.astro";
 import { Image } from "astro:assets";
 import fpimage from "../images/FPPicMacDog.jpeg";
 import fpcard1 from "../images/Service.jpg";
 import fpcard2 from "../images/Repairs.jpg";
 import fpcard3 from "../images/Wheel.jpg";
-import mapimage from "../images/OnTrackAutoCoverage.png";
+import mapimage from "../images/OnTrackAutoCoverageGeelong.png";
 
 const title =
-  "On-Track Auto | Mobile Mechanic | Servicing Bundoora and Surrounds";
+  "On-Track Auto | Mobile Mechanic | Servicing Geelong and surrounds";
 const description =
-  "Experienced mobile mechanic servicing Bundoora and surrounds, call and book today!";
+  "Experienced mobile mechanic servicing Geelong and surrounds, call and book today!";
 ---
 
 <FrontPageLayout title={title} description={description}>
@@ -22,7 +22,7 @@ const description =
         <div class="grid intro">
           <div class="left-box">
             <p>
-              At On-Track Auto, as your mobile mechanic in Bundoora, we are
+              At On-Track Auto, as your mobile mechanic in Geelong, we are
               redefining your experience with servicing and vehicle repairs.
               Whether it’s at your house, your work, or on the side of the road,
               we come to you!
@@ -54,7 +54,7 @@ const description =
           </div>
         </div>
         <h3>
-          Why Choose On-Track Auto – Your Local Mobile Mechanic in Bundoora?
+          Why Choose On-Track Auto – Your Local Mobile Mechanic in Geelong?
         </h3>
         <ul>
           <li>
@@ -157,9 +157,8 @@ const description =
   <article>
     <h2 style="text-align: center; margin-top: 0;" id="area">Area Covered</h2>
     <p>
-      On-Track Auto proudly provides Mobile Mechanical Services across Bundoora
-      and surrounding suburbs. Including Watsonia, Plenty, Eltham, Templestowe,
-      Doncaster, Balwyn, Kew, Brunswick, Reservoir, Epping and much more.
+      On-Track Auto proudly provides Mobile Mechanical Services across Geelong
+      and surrounding areas.
     </p>
     <div class="map">
       <Image src={mapimage} alt="Area Covered" />
